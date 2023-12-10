@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ea21c5fbc5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <label for="" class="logo"><a href="index.html">M-Movies</a></label>
+    <ul class="lista-nav">
+        <li class="generos"><a href="generos.html">Géneros</a></li>
+        <li class="peliculas"><a href="peliculas.html">Películas</a></li>
+        <li class="registro"><a href="perfil.html">Registro</a></li>
+    </ul>
+</nav>
+
+<div>
+    <button class="boton-recomendacion" onclick="cargarPeliculasPopulares()">Peliculas más populares</button>
+    <button class="boton-recomendacion" onclick="cargarPeliculasMejorPuntuadas()">Peliculas mejor puntuadas</button>
+    <button class="boton-recomendacion" onclick="cargarPeliculasMasNuevas()">Peliculas más nuevas</button>
+</div>
+
+<div id="tarjetasPeliculas"></div>
+<div id="peliculasPorGeneroContainer"></div>
+<div id="generosContainer"></div>
+<div id="listaPeliculas"></div>
+<div id="peliculasContainer"></div>
+
+<script src="js/peliculas.js"></script>
+</body>
+</html>

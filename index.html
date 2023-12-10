@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ea21c5fbc5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    <label for="" class="logo"><a href="index.html">M-Movies</a></label>
+    <h1>Bienvenidx a M-Movies! Nuestro propósito es ayudarte a elegir una película, según tus gustos, cuando no sabes que ver!</h1>
+
+    <ul class="lista-nav">
+        <li class="generos"><a href="generos.html">Géneros</a></li>
+        <li class="peliculas"><a href="peliculas.html">Películas</a></li>
+        <li class="registro"><a href="perfil.html">Registro</a></li>
+    </ul>
+</nav>
+
+
+<div id="tarjetasPeliculas"></div>
+
+<div class="containerPrincipal">
+    <div class="imagenesFondo">
+        <div class="imagenes imagen1">
+            <!-- <img src="imagenes/images.jpg"> -->
+        </div>
+    
+        <div class="imagenes imagen2">
+            <!-- <img src="imagenes/images (1).jpg"> -->
+        </div>
+
+        <div class="imagenes imagen3">
+            <!-- <img src="imagenes/images (2).jpg"> -->
+        </div>
+
+        <div class="imagenes imagen4">
+            <!-- <img src="imagenes/images (3).jpg"> -->
+        </div>
+
+        <div class="imagenes imagen5">
+            <!-- <img src="imagenes/images (4).jpg"> -->
+        </div>
+    
+        
+    </div>
+    <div class="containerBuscador">
+        <div class="containerBuscador2">
+            <label for="selectGenero1" class="etiqueta1">Selecciona un género:</label>
+            <select id="selectGenero1">
+                <option value="28">Acción</option>
+                <option value="16">Animación</option>
+                <option value="12">Aventura</option>
+                <option value="878">Ciencia Ficción</option>
+                <option value="35">Comedia</option>
+                <option value="80">Crimen</option> 
+                <option value="99">Documental</option> 
+                <option value="18">Drama</option> 
+                <option value="10751">Familia</option> 
+                <option value="14">Fantasía</option> 
+                <option value="10752">Guerra</option> 
+                <option value="36">Historia</option> 
+                <option value="27">Horror</option> 
+                <option value="10402">Música</option> 
+                <option value="9648">Misterio</option> 
+                <option value="10770">Pelicula de TV</option> 
+                <option value="10749">Romance</option> 
+                <option value="53">Thriller</option> 
+                <option value="37">Western</option> 
+            </select>
+
+            <label for="selectGenero2" class="etiqueta2">Selecciona un subgénero:</label>
+            <select id="selectGenero2">
+                <option value="28">Acción</option>
+                <option value="16">Animación</option>
+                <option value="12">Aventura</option>
+                <option value="878">Ciencia Ficción</option>
+                <option value="35">Comedia</option>
+                <option value="80">Crimen</option> 
+                <option value="99">Documental</option> 
+                <option value="18">Drama</option> 
+                <option value="10751">Familia</option> 
+                <option value="14">Fantasía</option> 
+                <option value="10752">Guerra</option> 
+                <option value="36">Historia</option> 
+                <option value="27">Horror</option> 
+                <option value="10402">Música</option> 
+                <option value="9648">Misterio</option> 
+                <option value="10770">Pelicula de TV</option> 
+                <option value="10749">Romance</option> 
+                <option value="53">Thriller</option> 
+                <option value="37">Western</option> 
+            </select>
+
+            <button class="btnBuscar" id="btnBuscar" onclick="buscarPelicula()">
+                <i class="fa-solid fa-magnifying-glass"></i> 
+            </button>
+        </div>
+    </div>
+
+    <div class="containerBtnRandom">
+        <button id="btnRandom" class="btnRandom">Clickea acá para una recomendación aleatoria!</button>
+    </div>
+
+
+</div>
+
+
+
+<script src="js/fetchapi.js"></script>
+<script src="js/registrologin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <h1>Bienvenidx a Cinema Platform!</h1>
+    <h2>Somos una página dedicada a clasificar y catalogar películas para ahorrarte tiempo en esos momentos que no sabes que ver</h2>
+    <ul class="lista">
+        <li>Explora películas por género</li>
+        <li>Ponte mas específicx agregando un subgenero!</li>
+    </ul>
+    <h3>Los géneros son los siguientes:</h3>
+    <ol>
+        <li>Comedia</li>
+        <li>Drama</li>
+        <li>Terror</li>
+        <li>Thriller</li>
+    </ol>
+
+
+    <p>Si quieres otra recomendación, introduce en la consola el siguiente texto: <b>ingresarGenero()</b></p>
+ <p>Si quieres ver la lista completa de peliculas por género, introduce en la consola: <b>filtrarPeliculasPorGenero()</b></p> -->

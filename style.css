@@ -1,0 +1,559 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(58, 56, 56);
+}
+
+
+.navbar {
+    background: rgb(114, 22, 22);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+.navbar label a {
+    color: rgb(243, 191, 122);
+    font-size: 3em;
+    padding: 0.3em;
+    text-decoration: none;
+
+
+}
+
+#selectGenero1,
+#selectGenero2,
+#btnBuscar,
+#btnRandom {
+    z-index: 2;
+    position: relative;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 3em 1em;
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5em;
+    color: rgb(243, 191, 122);
+    transition: all 0.6s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(114, 111, 111) ; 
+    font-size: 1.8em;
+
+}
+
+.imagenesFondo {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 120px); 
+    overflow: hidden;
+    z-index: -1;
+}
+
+.imagenes {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.imagen-activa {
+    opacity: 1;
+}
+
+.imagen1 { background-image: url('imagenes/images.jpg'); }
+.imagen2 { background-image: url('imagenes/images (1).jpg'); }
+.imagen3 { background-image: url('imagenes/images (2).jpg'); }
+.imagen4 { background-image: url('imagenes/images (3).jpg'); }
+.imagen5 { background-image: url('imagenes/images (4).jpg'); }
+.imagen5 { background-image: url('imagenes/images (5).jpg'); }
+.imagen5 { background-image: url('imagenes/images (6).jpg'); }
+.imagen5 { background-image: url('imagenes/images (7).jpg'); }
+.imagen5 { background-image: url('imagenes/images (8).jpg'); }
+.imagen5 { background-image: url('imagenes/images (9).jpg'); }
+
+.containerPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 80px; 
+}
+
+.containerBuscador {
+    display: flex;
+    justify-content: space-around;
+    background-color: bisque;
+    opacity: 0.87;
+    border-radius: 6px;
+}
+
+.containerBuscador2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6%;
+    width: 100%;    
+
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: bisque;
+}
+
+#tarjetasPeliculas {
+    margin-top: 80px; 
+    z-index: 999;
+    opacity: 0.87;
+}
+
+::placeholder {
+    color: gray;
+}
+
+.btnBuscar {
+    width: 3.6em;
+    height: 3.6em;
+    background:rgb(248, 150, 22);
+    cursor: pointer;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+}
+.btnBuscar i {
+
+    font-size: 1.2em;
+    color: #e6dfdf;
+
+}
+
+.etiqueta1 {
+    color: #910404;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#selectGenero1 {
+  color: #910404;
+  font-weight: bold; 
+  margin-bottom: 30px;
+}
+
+#selectGenero1 option {
+  color: rgb(61, 15, 15);
+  font-weight: bold; 
+}
+
+#selectGenero2 {
+  color: #910404;
+  font-weight: bold; 
+  margin-bottom: 30px;
+}
+
+#selectGenero2 option {
+  color: rgb(61, 15, 15);
+  font-weight: bold; 
+}
+
+.etiqueta2 {
+    color: #910404;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.containerBtnRandom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+.containerBtnRandom button {
+    
+    background-color: rgb(248, 150, 22);
+    width: 15em;
+    height: 3em;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    color: rgb(248, 248, 248);
+}
+
+.containerBtnRandom button:hover {
+    background-color: rgb(241, 180, 99);
+}
+
+
+#tarjetasPeliculas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+}
+    
+.pelicula-tarjeta {
+    display: flex;
+    border: 1px solid #e44141;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    padding-right: 15px;
+    max-width: 600px; 
+    background: rgb(114, 22, 22);
+    opacity: 0.87;
+    width: 400px;
+    overflow-y: auto;
+    max-height: 280px;
+}
+ 
+
+    .contenedor-imagen-puntuacion {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+    .contenedor-imagen-puntuacion img {
+        width: 150px; 
+        height: 230px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+        margin: 15px;
+    }
+    
+    .contenedor-imagen img {
+        width: 150px; 
+        height: 230px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+        margin: 15px;
+    }
+   
+
+    .puntuacion {
+        font-weight: bold;
+        display: flex;
+        color: #ffcc00;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+    .pelicula-tarjeta div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        color: #f5f5f5;
+    }
+    
+.titulo-pelicula {
+    text-align: center;
+}
+
+    .etiqueta-generos,
+    .etiqueta-sinopsis,
+    .titulo-pelicula {
+        margin: 5px 0;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+      
+
+#registrarUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3em;
+}
+
+#formularioRegistro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3em;
+
+}
+
+#registrarUsuario label {
+    margin-top: 3em;
+    font-size: 1.2em;
+}
+
+#registrarUsuario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+  }
+  
+  input.nombreUsuario {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input.contraseña {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input.email {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+
+#registrarUsuario select {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+}
+
+#botonRegistro {
+  margin-top: 3em;
+  width: 300px;
+  height: 100px; 
+  font-size: 16px;
+  background-color: rgba(226, 127, 57, 0.897);
+  border-radius: 50%;
+  font-size: 20px;
+  }
+
+#botonLeerMas {
+    background-color: rgb(219, 139, 35);
+    color: #fff; 
+    padding: 8px 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 4px;
+    margin-top: 8px; 
+  }
+
+
+  #botonLeerMas:hover {
+    background-color: rgb(243, 191, 122);
+
+  }
+
+  .titulo-pelicula {
+    color: rgb(219, 139, 35);
+  }
+
+  #generosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+
+
+.genero-tarjeta {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.genero-tarjeta h2 {
+    margin: 0;
+    font-size: 1.5em;
+    opacity: 1;
+    text-align: center;
+}
+
+
+
+.enlaceGenero {
+    background-color: #3498db; 
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px; 
+    display: inline-block; 
+    transition: background-color 0.3s ease; 
+    box-sizing: border-box;
+    display: inline-block;
+    opacity: 0.8;
+  }
+  
+.enlaceGenero a {
+    opacity: 0.1;
+}
+
+  .enlaceGenero:hover {
+    background-color: #2980b9;
+  }
+  
+
+  
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #selectGenero1 {
+    background-color: rgb(219, 139, 35);
+    color: #333; 
+  }
+  
+  #selectGenero2 {
+    background-color: rgb(219, 139, 35);
+    color: #555; 
+  }
+
+
+  #peliculasPorGeneroContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+  }
+  
+.pelicula-tarjeta img {
+    width: 150px; 
+    height: 230px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    margin: 15px;
+}
+
+  
+  .etiqueta-sinopsis,
+  .pelicula-tarjeta p {
+    max-height: none; 
+  }
+
+  
+.pelicula-tarjeta::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  .pelicula-tarjeta::-webkit-scrollbar-thumb {
+    background-color: rgb(219, 139, 35);
+    border-radius: 5px; 
+  }
+
+
+  .boton-recomendacion {
+    width: calc(33.33% - 10px);
+    height: 60px;
+    margin-right: 10px; 
+    box-sizing: border-box; 
+    border: 1px solid rgb(243, 191, 122);
+    background: rgb(114, 22, 22);
+    color: rgb(238, 216, 216); 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .boton-recomendacion:last-child {
+    margin-right: 0;
+  }
+  
+  .boton-recomendacion:hover {
+    background-color: #e75151; 
+  }
+  
+
+#botonLeerMas {
+    margin: 10px;
+}
+
+.contenido-texto {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.contenido-texto p {
+    padding: 5px;
+}
+
+
+
+.contenido-texto p {
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+   text-align: center;
+}
+
+.contenido-texto h2 {
+    max-height: none; 
+    font-size: 24px;
+
+  }
